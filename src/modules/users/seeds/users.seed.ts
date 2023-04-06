@@ -8,7 +8,7 @@ const result = await roleRepository.readMany({
   fields: "",
   filter: {},
   page: 1,
-  pageSize: 1,
+  pageSize: 2,
   sort: "",
 });
 
@@ -23,5 +23,12 @@ export const usersSeed = [
     password: password,
     name: "Admin",
     role_id: roles[0]._id,
+  },
+  {
+    username: "guest",
+    email: "guest@example.com",
+    password: password,
+    name: "Guest",
+    role_id: roles[1]._id,
   },
 ];
